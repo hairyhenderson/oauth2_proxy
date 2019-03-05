@@ -5,7 +5,7 @@ RUN curl -sSL https://github.com/bitly/oauth2_proxy/releases/download/v2.2/oauth
   | tar zxv --strip-components=1 -C /
 RUN chmod 755 /oauth2_proxy
 
-FROM debian:9.7 AS compress
+FROM debian:9.8 AS compress
 
 RUN apt-get update -qq
 RUN DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -yq curl xz-utils ca-certificates
